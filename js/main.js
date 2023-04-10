@@ -1,11 +1,11 @@
-// Name animation
-
+//window onload
 function ready(callback) {
   if (document.readyState != "loading") callback();
   else if (document.addEventListener)
     document.addEventListener("DOMContentLoaded", callback);
 }
 
+// Name animation
 var words = ["JINHUI", "JASON"],
   part,
   i = 0,
@@ -49,6 +49,31 @@ var wordflick = function () {
 
 ready(wordflick);
 
+// photo slide
+let slideIndex = 0;
+function showSlides() {
+  let slides = document.getElementsByClassName("photoSlides");
+  let dots = document.getElementsByClassName("dot");
+  // hide by default
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  // auto start over
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  // dot
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" dotactive", "");
+  }
+
+  slides[slideIndex - 1].style.display = "flex";
+  dots[slideIndex - 1].className += " dotactive";
+  setTimeout(showSlides, 3000);
+}
+ready(showSlides);
 
 //toggler menu
 const getNavToggler = document.querySelector(".nav__toggler");

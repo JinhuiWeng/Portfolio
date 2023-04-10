@@ -24,13 +24,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="CSS/normalize.css" />
-    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/test.css" />
     <!-- AOS animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
-    <div class="test">hover over me</div>
+    <div>LUMINANCE</div>
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -40,66 +40,4 @@
 </html>
 
 
-/* Contact icons */
-.contact__icons {
-  display: flex;
-  flex-direction: column;
-  /* width: 100%; */
-  align-items: end;
-  position: absolute;
-  top: 75%;
-  padding-right: 1.5rem;
-}
 
-.contact__icon {
-  width: 45px;
-  height: 45px;
-  margin-bottom: 1.5rem;
-
-
-  /* border: 1px solid transparent;
-  border-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a, #fbb03b);
-  border-image-slice: 1; */
-
-}
-
-.contact__icon {
-  position: relative;
-  border: 0;
-  box-sizing: border-box;
-  border-radius: 100%;
-}
-.contact__icon::before, .contact__icon::after {
-  box-sizing: inherit;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-}
-/* .contact__icon:hover {
-  background-color: rgb(54, 151, 116);
-} */
-.contact__icon::before, .contact__icon::after {
-  top: 0;
-  left: 0;
-}
-.contact__icon::before {
-  border: 2px solid transparent;
-}
-.contact__icon:hover::before {
-  border-top-color: yellow;
-  border-right-color: yellow;
-  border-bottom-color: yellow;
-  transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
-}
-.contact__icon::after {
-  border: 0 solid transparent;
-}
-.contact__icon:hover::after {
-  border-top: 2px solid yellow;
-  border-left-width: 2px;
-  border-right-width: 2px;
-  transform: rotate(270deg);
-  transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
-}
