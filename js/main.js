@@ -6,7 +6,8 @@ function ready(callback) {
 }
 
 // Name animation
-var words = ["JINHUI", "JASON"],
+// flip
+let words = ["JINHUI", "JASON"],
   part,
   i = 0,
   offset = 0,
@@ -15,7 +16,7 @@ var words = ["JINHUI", "JASON"],
   skip_count = 0,
   skip_delay = 15,
   speed = 100;
-var wordflick = function () {
+let wordFlick = function () {
   setInterval(function () {
     if (forwards) {
       if (offset >= words[i].length) {
@@ -47,7 +48,28 @@ var wordflick = function () {
   }, speed);
 };
 
-ready(wordflick);
+// slide
+
+let wordSlide = function () {
+  //spaning header
+  let projectHeaderTitle = document.getElementById("slide-text").innerText;
+  let spaned = "";
+  for (let i = 0; i < projectHeaderTitle.length; i++) {
+    spaned += "<span>" + projectHeaderTitle[i] + "</span>";
+  }
+
+  //DOM
+
+  let projectHeader = document.getElementById("slide-text");
+  projectHeader.innerHTML = spaned;
+  let letters = projectHeader.querySelectorAll("span");
+  letters.forEach((letter, i) => {
+    letter.style.animationDelay = i * 0.1 + "s";
+  });
+};
+
+ready(wordFlick);
+ready(wordSlide);
 
 // photo slide
 let slideIndex = 0;
