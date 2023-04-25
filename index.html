@@ -5,14 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" href="images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Search something" />
+    <meta
+    name="keyword"
+    content="Jinhui Weng, portfolio, front-end developer"
+  />
+  <meta
+    name="description"
+    content="A passionate self-motivated front-end developer who is driven by details and constantly learning new technology to achieve optimal user experience."
+  />
     <!-- Open Graph Protocal -->
-    <meta property="og:title" content="title..." />
-    <meta property="og:description" content="description..." />
+    <meta property="og:title" content="Jinhui Weng | Portfolio" />
+    <meta property="og:description" content="A passionate self-motivated front-end developer who is driven by details and constantly learning new technology to achieve optimal user experience." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://" />
-    <meta property="og:url" content="http://" />
-    <title>Portfolio - Jinhui Weng</title>
+    <meta property="og:url" content="https://github.com/JinhuiWeng/Portfolio" />
+    <title>Jinhui Weng | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,7 +37,8 @@
   </head>
 
   <body>
-    <header class="home__page">
+    <header class="home__page" id="home">
+
       <nav class="nav">
         <div class="nav__header">
           <div class="logo">
@@ -47,10 +55,10 @@
 
         <div class="nav__menu">
           <ul class="list nav__list">
-            <li class="nav__item"><a href="#">Home</a></li>
-            <li class="nav__item"><a href="#">About</a></li>
-            <li class="nav__item"><a href="#">Skills</a></li>
-            <li class="nav__item"><a href="#">Projects</a></li>
+            <li class="nav__item"><a href="#home">Home</a></li>
+            <li class="nav__item"><a href="#about">About</a></li>
+            <li class="nav__item"><a href="#skills">Skills</a></li>
+            <li class="nav__item"><a href="#projects">Projects</a></li>
           </ul>
         </div>
       </nav>
@@ -66,8 +74,10 @@
           <span class="title-word title-word-3">FRONTEND</span>
           <span class="title-word title-word-4">DEVELOPER.</span>
         </div>
-        <!-- <a href="#" class="btn btn--accent btn--stretched">About Me</a> -->
-        <a href="#" class="btn__aboutme">About Me</a>
+        <a href="#" id="btn__resume">Resume</a>
+        <button id="back-to-top">
+          <i class="fa fa-sharp fa-solid fa-arrow-up"></i>
+        </button>
       </div>
 
       <div class="contact__links">
@@ -100,7 +110,7 @@
       </div>
     </header>
     <main>
-      <section class="about__page">
+      <section class="about__page" id="about">
         <div class="about__page--container">
           <div class="about__photos">
             <div class="photoSlides fade">
@@ -136,7 +146,7 @@
         </div>
       </section>
 
-      <section class="skills__page">
+      <section class="skills__page" id="skills">
         <div class="skills__title text-flip">
           <span style="--n: 1">S</span>
           <span style="--n: 2">k</span>
@@ -163,7 +173,7 @@
                 </li>
                 <li class="list__item">
                   <img src="images/skills/javascript-icon.svg" alt="JS_Icon" />
-                  JaveScript
+                  JavaScript
                 </li>
                 <li class="list__item">
                   <img
@@ -317,7 +327,7 @@
         </div>
       </section>
 
-      <section class="project__page skewed-left">
+      <section class="project__page skewed-left"  id="projects">
         <div class="project__header" id="slide-text">Projects.</div>
         <div class="projects project__odd" id="project__1">
           <div class="project__image" data-aos="zoom-in-right" data-aos-duration="1500"><img src="images/Movie Library.jpeg" alt="MOVIE LIBRARY" /></div>
@@ -331,7 +341,7 @@
                 <img src="images/skills/bootstrap-icon.svg" alt="BOOTSTRAP_Icon"/> Bootstrap
               </span>
               <span>
-                <img src="images/skills/javascript-icon.svg" alt="JS_Icon" /> JaveScript
+                <img src="images/skills/javascript-icon.svg" alt="JS_Icon" /> JavaScript
               </span> 
               <span>
                 <img src="images/skills/css-icon.svg" alt="CSS_Icon" /> CSS
@@ -377,7 +387,7 @@
                 <img src="images/skills/bootstrap-icon.svg" alt="BOOTSTRAP_Icon"/> Bootstrap
               </span>
               <span>
-                <img src="images/skills/javascript-icon.svg" alt="JS_Icon" /> JaveScript
+                <img src="images/skills/javascript-icon.svg" alt="JS_Icon" /> JavaScript
               </span> 
               <span>
                 <img src="images/skills/css-icon.svg" alt="CSS_Icon" /> CSS
@@ -400,7 +410,7 @@
             <div class="project__content--title">To-do List</div>
             <div class="project__content--skill">
               <span>
-                <img src="images/skills/javascript-icon.svg" alt="JS_Icon" /> JaveScript
+                <img src="images/skills/javascript-icon.svg" alt="JS_Icon" /> JavaScript
               </span> 
               <span>
                 <img src="images/skills/css-icon.svg" alt="CSS_Icon" /> CSS
@@ -426,16 +436,10 @@
         <div class="projects project__even" id="project__4">
           <div class="project__image" data-aos="zoom-out-up" data-aos-duration="1500"><img src="images/CloudPro.jpeg" alt="CLOUDPRO" /></div>
           <div class="project__content">
-            <div class="project__content--title">Zodiac Memory Card Game</div>
+            <div class="project__content--title">CloudPro</div>
             <div class="project__content--skill">
               <span>
-                <img src="images/skills/react-icon.svg" alt="REACT_Icon" /> React
-              </span> 
-              <span>
-                <img src="images/skills/bootstrap-icon.svg" alt="BOOTSTRAP_Icon"/> Bootstrap
-              </span>
-              <span>
-                <img src="images/skills/javascript-icon.svg" alt="JS_Icon" /> JaveScript
+                <img src="images/skills/javascript-icon.svg" alt="JS_Icon" /> JavaScript
               </span> 
               <span>
                 <img src="images/skills/css-icon.svg" alt="CSS_Icon" /> CSS
@@ -443,10 +447,10 @@
             </div>
 
            
-            <div class="project__content--description"><p>Zodiac memory card game with score and timer features.</p></div>
+            <div class="project__content--description"><p>A landing page for CloudPro, a mock CLOUD/DOMAIN/VPS services website.</p></div>
             <div class="project__content--button">
-              <a href="https://jinhuiweng.github.io/zodiac-memory-game/" target="_blank" class="project__content--button--live button--topopen"> <i class="fa fa-light fa-arrow-right"> Live</i></a>
-              <a href="https://github.com/JinhuiWeng/zodiac-memory-game" target="_blank" class="project__content--button--code button--bottomopen"><i class="fa fa-solid fa-code"> Code</i></a>
+              <a href="https://cloud-pro.vercel.app/" target="_blank" class="project__content--button--live button--topopen"> <i class="fa fa-light fa-arrow-right"> Live</i></a>
+              <a href="https://github.com/JinhuiWeng/CloudPro" target="_blank" class="project__content--button--code button--bottomopen"><i class="fa fa-solid fa-code"> Code</i></a>
             </div>
           </div>
         </div>
@@ -454,27 +458,24 @@
           <div class="projects project__odd" id="project__5">
             <div class="project__image" data-aos="fade-up-right" data-aos-duration="1500"><img src="images/Upcoming Project.jpeg" alt="UPCOMING PROJECT" /></div>
             <div class="project__content">
-              <div class="project__content--title">Zodiac Memory Card Game</div>
+              <div class="project__content--title">Video Game Hub (RAWG)</div>
               <div class="project__content--skill">
                 <span>
-                  <img src="images/skills/react-icon.svg" alt="REACT_Icon" /> React
+                  <img src="images/skills/react-icon.svg" alt="REACT_Icon" /> React(Vite)
                 </span> 
                 <span>
-                  <img src="images/skills/bootstrap-icon.svg" alt="BOOTSTRAP_Icon"/> Bootstrap
-                </span>
-                <span>
-                  <img src="images/skills/javascript-icon.svg" alt="JS_Icon" /> JaveScript
-                </span> 
-                <span>
-                  <img src="images/skills/css-icon.svg" alt="CSS_Icon" /> CSS
+                  <img
+                    src="images/skills/typescript-icon.svg"
+                    alt="TS_Icon"
+                  /> TypeScript
                 </span>
               </div>
   
              
-              <div class="project__content--description"><p>Zodiac memory card game with score and timer features.</p></div>
+              <div class="project__content--description"><p>Consuming RAWG API and mocking up website</p></div>
               <div class="project__content--button">
-                <a href="https://jinhuiweng.github.io/zodiac-memory-game/" target="_blank" class="project__content--button--live button--topopen"> <i class="fa fa-light fa-arrow-right"> Live</i></a>
-                <a href="https://github.com/JinhuiWeng/zodiac-memory-game" target="_blank" class="project__content--button--code button--bottomopen"><i class="fa fa-solid fa-code"> Code</i></a>
+                <a href="#" target="_blank" class="project__content--button--live button--topopen"> <i class="fa fa-light fa-arrow-right"> Live</i></a>
+                <a href="#" target="_blank" class="project__content--button--code button--bottomopen"><i class="fa fa-solid fa-code"> Code</i></a>
               </div>
             </div>
             </div>

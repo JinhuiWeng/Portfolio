@@ -97,13 +97,36 @@ function showSlides() {
 }
 ready(showSlides);
 
-//toggler menu
+//toggler and nav menu
 const getNavToggler = document.querySelector(".nav__toggler");
 const getNavMenu = document.querySelector(".nav__menu");
-getNavToggler.addEventListener("click", function () {
-  getNavMenu.classList.toggle("nav__menu--expanded");
-});
+const getNavItem = document.querySelectorAll(".nav__item");
+getNavToggler.addEventListener("click", () =>
+  getNavMenu.classList.toggle("nav__menu--expanded")
+);
+
+getNavItem.forEach((item) =>
+  item.addEventListener("click", () => {
+    if (getNavMenu.classList.contains("nav__menu--expanded")) {
+      getNavMenu.classList.toggle("nav__menu--expanded");
+      getNavToggler.classList.toggle("change");
+    }
+  })
+);
 
 function handleNavMenu(item) {
   item.classList.toggle("change");
 }
+
+//Back to top button
+const backToTopButton = document.getElementById("back-to-top");
+
+function scrollDownFunction() {
+  if (window.pageYOffset > 1800) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+}
+window.addEventListener("scroll", scrollDownFunction);
+backToTopButton.addEventListener("click", () => window.scrollTo(0, 0));
