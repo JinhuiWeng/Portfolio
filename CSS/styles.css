@@ -24,14 +24,16 @@
 html {
   /* default size is 16px, so 62.5 is 10 */
   font-size: 62.5%;
+  /* remove bottom scroll bar and white space */
+  overflow-x: hidden;
 }
 
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
   line-height: 1.5;
-  /* remove borrom scroll bar */
-  overflow-x: hidden;
+  /* remove scroll bar and white space */
+  overflow: hidden;
 }
 
 h1,
@@ -160,7 +162,6 @@ a {
 }
 
 .nav__menu {
-  /* background: var(--color-background-dark); */
   display: none;
 }
 
@@ -431,11 +432,12 @@ a {
 .contact__links {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: end;
+  width: 100%;
   position: absolute;
   top: 75%;
   padding-right: 1.5rem;
+  z-index: 2;
 }
 
 .contact__link {
