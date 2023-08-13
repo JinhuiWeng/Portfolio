@@ -766,7 +766,6 @@ a {
   background: var(--color-background-dark);
   border-radius: 7px;
   /* Show radius when size is bigger than skills-card itself  */
-  overflow: hidden;
   width: 65%;
   margin-bottom: 1.5rem;
   color: var(--color-text-light);
@@ -774,6 +773,7 @@ a {
 .card__header,
 .card__body {
   text-align: center;
+  overflow: hidden;
 }
 
 .card__header {
@@ -899,6 +899,11 @@ a {
   .skills__card {
     width: 30%;
     height: 550px;
+    overflow: scroll;
+  }
+  /* hide scroll bar */
+  ::-webkit-scrollbar {
+    display: none;
   }
   .skills__cards img {
     width: 25px;
@@ -908,6 +913,8 @@ a {
     height: 4px;
   }
 }
+
+
 
 /* Lists */
 .list {
